@@ -1,7 +1,7 @@
 
-# Unicity-Mock
+# SSI-JS
 
-Unicity-Mock is a lightweight Express.js server that manages an append-only table of non-modifiable key-value records. The key (`request_id`) is a 256-bit hash derived from a public key and a state. The value is a tuple consisting of a 256-bit payload and an authenticator, where the authenticator includes an elliptic curve (EC) signature of the payload. The server provides two JSON-RPC methods:
+SSI-JS is a lightweight Express.js server that manages an append-only table of non-modifiable key-value records. The key (`request_id`) is a 256-bit hash derived from a public key and a state. The value is a tuple consisting of a 256-bit payload and an authenticator, where the authenticator includes an elliptic curve (EC) signature of the payload. The server provides two JSON-RPC methods:
 - `register`: Registers a new record.
 - `get`: Retrieves a previously registered record's payload and authenticator.
 
@@ -20,8 +20,8 @@ Unicity-Mock is a lightweight Express.js server that manages an append-only tabl
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/yourusername/unicity-mock.git
-   cd unicity-mock
+   git clone [https://github.com/vrogojin/ssi-js.git](https://github.com/vrogojin/ssi-js.git)
+   cd ssi-js
    ```
 
 2. Install dependencies:
@@ -92,7 +92,7 @@ Authenticator: [<signature>, <public_key>, <state>]
 ## File Structure
 
 - **`server.js`**: The main Express.js server that handles JSON-RPC requests for registering and retrieving records.
-- **`unicity-mock-client.js`**: A client library for interacting with the server's API.
+- **`client.js`**: A client library for interacting with the server's API.
 - **`register_request.js`**: A command-line script for registering requests with the server.
 - **`get_request.js`**: A command-line script for retrieving registered records from the server.
 
